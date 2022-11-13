@@ -1,0 +1,34 @@
+{
+  "name": "bjordandev-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "description": "bjordandev-portfolio",
+  "author": "bjordandev",
+  "homepage": "https://github.com/bjordandev/portfolio#readme",
+  "bugs": {
+    "url": "https://github.com/bjordandev/portfolio/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bjordandev/portfolio.git"
+  },
+  "scripts": {
+    "develop": "gatsby develop",
+    "start": "gatsby develop",
+    "build": "gatsby build",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "gatsby": "^5.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^18.11.9",
+    "@types/react": "^18.0.25",
+    "@types/react-dom": "^18.0.8",
+    "typescript": "^4.8.4"
+  }
+}
