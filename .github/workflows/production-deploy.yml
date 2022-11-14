@@ -13,15 +13,29 @@ jobs:
     
     steps:
     
-    - name: "Checkout source code"
-      uses: actions/checkout@v2.5.0
-    
-    - name: "Install NodeJS"
-      uses: actions/setup-node@v3.5.1
-      with: 
+     - name: "Install NodeJS"
+       uses: actions/setup-node@v3.5.1
+       with: 
         node-version: 18
-            
-    - name: "Build website"
-      run: |
+        
+     - name: "Checkout source code"
+       uses: actions/checkout@v2.5.0
+       
+     - name: "Build website"
+       run: |
         npm install
         npm run build
+        
+     - name: "Deploy to Netlify"
+       uses: nwtgck/actions-netlify@v1.2.4
+       with: 
+        publish-dir: './public'
+        functions-dir: './.netlify/functions'
+        production-branch: 'main'
+        production-deploy: true
+        fails-without-credentials: true
+       env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+  
+      
