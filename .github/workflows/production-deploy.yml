@@ -30,7 +30,6 @@ jobs:
        uses: nwtgck/actions-netlify@v1.2.4
        with: 
         publish-dir: 'public'
-        functions-dir: '.netlify/functions'
         production-branch: 'main'
         production-deploy: true
         fails-without-credentials: true
