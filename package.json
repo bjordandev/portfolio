@@ -15,9 +15,9 @@
   "scripts": {
     "develop": "gatsby develop",
     "start": "gatsby develop",
-    "build": "gatsby build",
+    "build": "sudo gatsby build",
     "serve": "gatsby serve",
-    "clean": "gatsby clean",
+    "clean": "sudo gatsby clean",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
