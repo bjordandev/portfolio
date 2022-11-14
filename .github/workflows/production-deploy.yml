@@ -11,7 +11,7 @@ jobs:
     name: 'Deploy'
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v3
       - uses: jsmrcaga/action-netlify-deploy@master
         with:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
@@ -19,5 +19,3 @@ jobs:
           NETLIFY_DEPLOY_TO_PROD: true
           build_directory: "public"
           functions_directory: ".netlify/functions"
-          install_command: "npm install"
-          build_command: "npm run build"
