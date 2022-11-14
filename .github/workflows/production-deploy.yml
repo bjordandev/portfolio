@@ -7,15 +7,20 @@ on:
       - main
       
 jobs:
+
   build:
     runs-on: ubuntu-latest
+    
     steps:
+    
+    - name: "Checkout source code"
+      uses: actions/checkout@v2.5.0
+    
     - name: "Install NodeJS"
       uses: actions/setup-node@v3.5.1
       with: 
         version: 18.x
-    - name: "Checkout source code"
-      uses: actions/checkout@v2.5.0
+            
     - name: "Build website"
       run: |
         npm install
