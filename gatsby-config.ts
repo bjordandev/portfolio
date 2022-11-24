@@ -16,6 +16,12 @@ const config: GatsbyConfig = {
         failOn: 'warning',
       }
     },
+    {
+      resolve: "gatsby-source-hashnode",
+      options: {
+        username: "bjordandev",
+      },
+    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-image`,
   ],
