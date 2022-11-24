@@ -19,7 +19,7 @@
     "serve": "gatsby serve",
     "clean": "sudo gatsby clean",
     "typecheck": "tsc --noEmit",
-    "test:watch": "jest --watch --passWithNoTests",
+    "test:watch": "jest --watch",
     "test":"jest --passWithNoTests"
   },
   "dependencies": {
