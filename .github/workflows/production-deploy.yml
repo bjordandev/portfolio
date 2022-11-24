@@ -7,34 +7,41 @@ on:
       - main
       
 jobs:
-
+  setup: 
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Install NodeJS"
+        uses: actions/setup-node@v3.5.1
+        with: 
+          node-version: 18
+      - name: "Checkout source code"
+        uses: actions/checkout@v2.5.0
+      - name: "Build website"
+        run: |
+          npm install
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Testing"
+        run: |
+          npm run test
   build:
     runs-on: ubuntu-latest
-    
+    steps: 
+      - name: "Building"
+        run: /
+          npm run build
+  deploy:
+    runs-on: ubuntu-latest
     steps:
-    
-     - name: "Install NodeJS"
-       uses: actions/setup-node@v3.5.1
-       with: 
-        node-version: 18
-        
-     - name: "Checkout source code"
-       uses: actions/checkout@v2.5.0
-       
-     - name: "Build website"
-       run: |
-        npm install
-        npm run build
-        
-     - name: "Deploy to Netlify"
-       uses: nwtgck/actions-netlify@v1.2.4
-       with: 
-        publish-dir: 'public'
-        production-branch: 'main'
-        production-deploy: true
-        fails-without-credentials: true
-       env:
+      - name: "Deploy to Netlify"
+        uses: nwtgck/actions-netlify@v1.2.4
+        with: 
+          publish-dir: 'public'
+          production-branch: 'main'
+          production-deploy: true
+          fails-without-credentials: true
+        env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
-  
-      
+     
