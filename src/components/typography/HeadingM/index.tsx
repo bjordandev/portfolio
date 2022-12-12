@@ -9,7 +9,7 @@ interface TypographyProps extends HTMLAttributes<HTMLOrSVGElement> {
   color?: string;
 }
 
-const HeadingM: React.FC<TypographyProps> = ({
+const HeadingM: FC<TypographyProps> = ({
   as: Tag = 'h3',
   children,
   color = getCSSVariable("--theme-color-text")
