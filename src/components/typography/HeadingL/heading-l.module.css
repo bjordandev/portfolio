@@ -1,16 +1,14 @@
 .headingL {
-  font-family: 'Inter';
   font-style: normal;
-  font-weight: 600;
-  font-size: 2rem;
-  line-height: 2.4375rem;
-  letter-spacing: 0.035em;
+  font-weight: 500;
+  font-size: 1.5rem;
+  line-height: 1.8125rem;
+  letter-spacing: 0.03em;
 }
 
 @media screen and (min-width: 1264px) {
   .headingL {
-    font-weight: 700;
-    font-size: 3.75rem;
-    line-height: 4.5625rem;
+    font-size: 3rem;
+    line-height: 3.625rem;
   }
 }

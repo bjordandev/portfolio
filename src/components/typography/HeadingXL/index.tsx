@@ -1,5 +1,5 @@
 import React, { ElementType, HTMLAttributes, FC} from "react"
-import * as styles from "./heading-m.module.css";
+import * as styles from "./heading-xl.module.css";
 
 import { getCSSVariable } from "../../../helpers";
 
@@ -9,16 +9,16 @@ interface TypographyProps extends HTMLAttributes<HTMLOrSVGElement> {
   color?: string;
 }
 
-const HeadingM: React.FC<TypographyProps> = ({
-  as: Tag = 'h2',
+const HeadingXL: React.FC<TypographyProps> = ({
+  as: Tag = 'h1',
   children,
   color = getCSSVariable("--theme-color-text")
 }) => {
   return (
-    <Tag className={styles.headingM} style={{color}}>
+    <Tag className={styles.headingXL} style={{color}}>
       { children }
     </Tag>
   );
 }
 
-export default HeadingM;
+export default HeadingXL;

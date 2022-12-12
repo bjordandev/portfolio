@@ -1,0 +1,16 @@
+.headingXL {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 2rem;
+  line-height: 2.4375rem;
+  letter-spacing: 0.035em;
+}
+
+@media screen and (min-width: 1264px) {
+  .headingXL {
+    font-weight: 700;
+    font-size: 3.75rem;
+    line-height: 4.5625rem;
+  }
+}
