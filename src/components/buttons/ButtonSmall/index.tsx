@@ -3,7 +3,7 @@ import * as styles from "./button-small.module.css";
 
 type ButtonSmallProps = {
   children?: string;
-  handleClick: (event: React.MouseEvent<HTMLElement>) => true;
+  handleClick?: (event: React.MouseEvent<HTMLElement>) => true;
 }
 
 const ButtonSmall: FC<ButtonSmallProps> = ({
