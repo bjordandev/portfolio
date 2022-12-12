@@ -1,0 +1,9 @@
+:root {
+  --theme-color-default: #0C002E;
+  --theme-color-main: #6936FE;
+  --theme-color-main--hover: #A081FE;
+  --theme-color-text: #0D0033;
+  --theme-color-white: #FFFFFF;
+  --theme-color-error: #FE3636;
+  --theme-color-error--hover: #FE8080;
+}
