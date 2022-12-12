@@ -1,0 +1,14 @@
+.displayText {
+  font-family: 'Source Code Pro';
+  font-style: normal;
+  font-weight: 900;
+  font-size: 2rem;
+  line-height: 2.5rem;  
+}
+
+@media screen and (min-width: 1264px) {
+  .displayText {
+    font-size: 4rem;
+    line-height: 5rem;
+  }
+}
