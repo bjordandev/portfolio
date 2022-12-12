@@ -1,5 +1,5 @@
 .displayText {
-  font-family: 'Source Code Pro';
+  font-family: var(--theme-font-sourceCodePro);
   font-style: normal;
   font-weight: 900;
   font-size: 2rem;

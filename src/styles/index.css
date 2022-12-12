@@ -6,4 +6,10 @@
   --theme-color-white: #FFFFFF;
   --theme-color-error: #FE3636;
   --theme-color-error--hover: #FE8080;
+  --theme-font-inter: 'Inter', sans-serif;
+  --theme-font-sourceCodePro: font-family: 'Source Code Pro', monospace;
+}
+
+body {
+  font-family: var(--theme-font-inter);
 }
