@@ -1,0 +1,35 @@
+.buttonSmall {
+  display:inline;
+  position:relative;
+  height: 1.25rem;
+  background-color: var(--theme-color-main);
+  border-radius: 0rem 0.3125rem;
+  padding: 0.1875rem 1.8125rem;
+
+  font-style: normal;
+  font-weight: 700;
+  font-size: 0.75rem;
+  line-height: 0.9375rem;
+  letter-spacing: 0.03em;
+  color: var(--theme-color-white);
+  text-transform: uppercase;
+  z-index:1;
+}
+
+.buttonSmall::after {
+  opacity:0;
+  background-color: var(--theme-color-main--hover);
+  position:absolute;
+  content:"";
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  border-radius: inherit;
+  z-index: -1;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.buttonSmall:hover::after {
+  opacity:1;
+}
