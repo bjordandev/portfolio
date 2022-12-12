@@ -1,0 +1,14 @@
+.headingM {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.5rem;
+  line-height: 1.8125rem;
+  letter-spacing: 0.03em;
+}
+
+@media screen and (min-width: 1264px) {
+  .headingM {
+    font-size: 3rem;
+    line-height: 3.625rem;
+  }
+}
