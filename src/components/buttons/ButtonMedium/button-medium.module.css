@@ -1,0 +1,35 @@
+.buttonMedium {
+  display:inline;
+  position:relative;
+  height: 2rem;
+  background-color: var(--theme-color-main);
+  border-radius: 0rem 0.625rem;
+  padding: 0.5rem 2.625rem;
+
+  font-style: normal;
+  font-weight: 500;
+  font-size: 0.875rem;
+  line-height: 1.0625rem;
+  letter-spacing: 0.03em;
+  color: var(--theme-color-white);
+  text-transform: uppercase;
+  z-index:1;
+}
+
+.buttonMedium::after {
+  opacity:0;
+  background-color: var(--theme-color-main--hover);
+  position:absolute;
+  content:"";
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  border-radius: inherit;
+  z-index: -1;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.buttonMedium:hover::after {
+  opacity:1;
+}
