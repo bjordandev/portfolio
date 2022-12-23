@@ -15,7 +15,7 @@
   text-transform: uppercase;
 }
 
-.buttonSmall::after {
+.buttonLarge::after {
   opacity:0;
   background-color: var(--theme-color-main--hover);
   position:absolute;
@@ -29,6 +29,6 @@
   transition: opacity 0.2s ease-in-out;
 }
 
-.buttonSmall:hover::after {
+.buttonLarge:hover::after {
   opacity:1;
 }
