@@ -1,8 +1,22 @@
+.textInputWrapper {
+  position: relative;
+}
+
+.textInputIcon {
+  position:absolute;
+  right: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 22px;
+  color: var(--theme-color-default);
+}
+
 .textInput {
+  width:100%;
   background: var(--theme-color-white);
   border-bottom: 5px solid var(--theme-color-default);
   height:50px;
-  padding-left: 18px;
+  padding: 0 18px;
 
   font-style: normal;
   font-weight: 400;
@@ -18,6 +32,10 @@
   color: var(--theme-color-default);
 }
 
+.textInputWrapper:hover > .textInputIcon {
+  color: var(--theme-color-main);
+}
+
 .textInputError {
   border-bottom-color: var(--theme-color-error);
   color: var(--theme-color-error);
@@ -25,5 +43,13 @@
 
 .textInputValid {
   border-bottom-color: var(--theme-color-main);
+  color: var(--theme-color-main);
+}
+
+.iconError {
+  color: var(--theme-color-error);
+}
+
+.iconValid {
   color: var(--theme-color-main);
 }

@@ -5,31 +5,50 @@ type TextInputProps = {
   value?: string;
   valid?: boolean;
   handleChange?: (e: ChangeEvent<HTMLInputElement>) => void;
-  attrs?: InputHTMLAttributes<HTMLInputElement>
+  attrs?: InputHTMLAttributes<HTMLInputElement>,
+  iconName?: string | null
 }
 
 const TextInput: FC<TextInputProps> = ({
   value,
   valid = null,
   handleChange,
-  attrs = {}
+  attrs = {},
+  iconName = null
 }) => {
   const defaultAttrs = { type: "text" };
   const mergedAttrs = Object.assign({}, defaultAttrs, attrs);
-  let stateClass = "";
 
-  if (valid === true) stateClass = styles.textInputValid;
-  else if (valid === false) stateClass = styles.textInputError;
+  let inputStateClassName = "";
+  let iconStateClassName = "";
 
-  const classes:string = `${styles.textInput} ${stateClass}`;
-
-  return (
+  if (valid === true) {
+    inputStateClassName = styles.textInputValid;
+    iconStateClassName = styles.iconValid
+  } else if (valid === false) {
+    inputStateClassName = styles.textInputError;
+    iconStateClassName = styles.iconError
+  }
+  
+  const textInputElement = iconName ? (
+    <div className={`${styles.textInputWrapper}`}>
+      <input
+        {...mergedAttrs}
+        className={`${styles.textInput} ${inputStateClassName}`}
+        value={value}
+        onChange={handleChange}
+      />
+      <i className={`${styles.textInputIcon} ${iconStateClassName} fas fa-${iconName}`} aria-hidden="true"></i>
+    </div>
+  ) : (
     <input
-      {...mergedAttrs}
-      className={classes}
-      value={value}
-      onChange={handleChange}
-    />
-  );
+        {...mergedAttrs}
+        className={`${styles.textInput} ${inputStateClassName}`}
+        value={value}
+        onChange={handleChange}
+      />
+  )
+
+  return textInputElement
 }
 export default TextInput;
