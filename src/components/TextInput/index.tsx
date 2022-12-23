@@ -1,4 +1,6 @@
 import React, { ChangeEvent, FC, InputHTMLAttributes } from "react"
+import classnames from "classnames";
+
 import * as styles from "./text-input.module.css";
 
 type TextInputProps = {
@@ -19,36 +21,37 @@ const TextInput: FC<TextInputProps> = ({
   const defaultAttrs = { type: "text" };
   const mergedAttrs = Object.assign({}, defaultAttrs, attrs);
 
-  let inputStateClassName = "";
-  let iconStateClassName = "";
+  const inputStateClassName = classnames(styles.textInput, {
+    [styles.textInputValid]: valid === true,
+    [styles.textInputError]: valid === false,
+  });
 
-  if (valid === true) {
-    inputStateClassName = styles.textInputValid;
-    iconStateClassName = styles.iconValid
-  } else if (valid === false) {
-    inputStateClassName = styles.textInputError;
-    iconStateClassName = styles.iconError
-  }
-  
-  const textInputElement = iconName ? (
-    <div className={`${styles.textInputWrapper}`}>
-      <input
-        {...mergedAttrs}
-        className={`${styles.textInput} ${inputStateClassName}`}
-        value={value}
-        onChange={handleChange}
-      />
-      <i className={`${styles.textInputIcon} ${iconStateClassName} fas fa-${iconName}`} aria-hidden="true"></i>
-    </div>
-  ) : (
+  const iconStateClassName = classnames(styles.textInputIcon, {
+    [styles.iconValid]: valid === true,
+    [styles.iconError]: valid === false,
+  });
+
+  const inputElement = (
     <input
-        {...mergedAttrs}
-        className={`${styles.textInput} ${inputStateClassName}`}
-        value={value}
-        onChange={handleChange}
-      />
-  )
+      {...mergedAttrs}
+      className={inputStateClassName}
+      value={value}
+      onChange={handleChange}
+    />
+  );
 
-  return textInputElement
+  const iconElement = iconName ? (
+    <i
+      className={`${iconStateClassName} fas fa-${iconName}`}
+      aria-hidden="true"
+    />
+  ) : null;
+
+  return iconName ? (
+    <div className={styles.textInputWrapper}>
+      {inputElement}
+      {iconElement}
+    </div>
+  ) : inputElement;
 }
 export default TextInput;
