@@ -1,0 +1,29 @@
+.textInput {
+  background: var(--theme-color-white);
+  border-bottom: 5px solid var(--theme-color-default);
+  height:50px;
+  padding-left: 18px;
+
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.1875rem;
+  letter-spacing: 0.01em;
+  color: var(--theme-color-default);
+  text-transform: uppercase;
+}
+
+.textInput:hover {
+  border-bottom-color: var(--theme-color-main);
+  color: var(--theme-color-default);
+}
+
+.textInputError {
+  border-bottom-color: var(--theme-color-error);
+  color: var(--theme-color-error);
+}
+
+.textInputValid {
+  border-bottom-color: var(--theme-color-main);
+  color: var(--theme-color-main);
+}
