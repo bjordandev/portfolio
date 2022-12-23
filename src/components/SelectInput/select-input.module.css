@@ -1,0 +1,18 @@
+.selectInput {
+  appearance: none;
+  position: relative;
+  background: white url("../../assets/select-input-arrow.svg") no-repeat right 18px center;
+  width:100%;
+  border-bottom: 5px solid var(--theme-color-default);
+  height:50px;
+  padding-left: 18px;
+  padding-right: 36px;
+
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.1875rem;
+  letter-spacing: 0.01em;
+  color: var(--theme-color-text);
+  text-transform: uppercase;
+}
