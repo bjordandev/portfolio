@@ -1,0 +1,34 @@
+.buttonLarge {
+  display:inline;
+  position:relative;
+  z-index:1;
+  background-color: var(--theme-color-main);
+  border-radius: 0rem 1.875rem;
+  padding: 17px 40px;
+  
+  color: var(--theme-color-white);
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.buttonSmall::after {
+  opacity:0;
+  background-color: var(--theme-color-main--hover);
+  position:absolute;
+  content:"";
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  border-radius: inherit;
+  z-index: -1;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.buttonSmall:hover::after {
+  opacity:1;
+}
