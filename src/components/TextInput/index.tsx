@@ -1,10 +1,10 @@
-import React, { FC, InputHTMLAttributes } from "react"
+import React, { ChangeEvent, FC, InputHTMLAttributes } from "react"
 import * as styles from "./text-input.module.css";
 
 type TextInputProps = {
   value?: string;
   valid?: boolean;
-  handleChange?: (e: React.FormEvent<HTMLInputElement>) => void;
+  handleChange?: (e: ChangeEvent<HTMLInputElement>) => void;
   attrs?: InputHTMLAttributes<HTMLInputElement>
 }
 
