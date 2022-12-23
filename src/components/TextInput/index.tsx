@@ -14,12 +14,8 @@ const TextInput: FC<TextInputProps> = ({
   handleChange,
   attrs = {}
 }) => {
-
-  const _attrs = {
-    type: "text",
-    ...attrs
-  };
-  
+  const defaultAttrs = { type: "text" };
+  const mergedAttrs = Object.assign({}, defaultAttrs, attrs);
   let stateClass = "";
 
   if (valid === true) stateClass = styles.textInputValid;
@@ -28,13 +24,12 @@ const TextInput: FC<TextInputProps> = ({
   const classes:string = `${styles.textInput} ${stateClass}`;
 
   return (
-    <input 
-      {...attrs} 
-      className={classes} 
-      value={value} 
-      onChange={handleChange} 
-    />  
+    <input
+      {...mergedAttrs}
+      className={classes}
+      value={value}
+      onChange={handleChange}
+    />
   );
 }
-
 export default TextInput;
