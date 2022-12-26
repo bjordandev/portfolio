@@ -1,0 +1,17 @@
+.Logo {
+  fill:white;
+}
+
+.HeaderLogo {
+  display:flex;
+  align-items: center;
+  gap: 18px;
+}
+
+
+@media screen and (min-width: 1264px) {
+  .Logo {
+    transform: scale(2) translateX(25%);
+    fill: var(--theme-color-main);
+  }
+}

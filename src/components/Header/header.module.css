@@ -1,0 +1,43 @@
+.Header {
+  display:flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--theme-color-main);
+  padding: 40px 30px 30px 30px;
+}
+
+.Logo {
+  fill:white;
+}
+
+.HeaderLogo {
+  display:flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.HeaderContact {
+  display:none;
+}
+
+@media screen and (min-width: 1264px) {
+  .Header {
+    background-color:white;
+    padding: 0;
+    margin: 0 auto;
+    width: calc(100% - 176px);
+    max-width: 1264px;
+    padding: 75px 0px;
+  }
+
+  .HeaderContact {
+    display:block;
+  }
+
+  .Logo {
+    transform: scale(2) translateX(25%);
+    fill: var(--theme-color-main);
+  }
+}
+
+
