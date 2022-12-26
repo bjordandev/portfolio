@@ -41,7 +41,6 @@ footer, header, hgroup, menu, nav, section {
 }
 
 body {
-	background-color: red;
 	line-height: 1;
 }
 
@@ -73,4 +72,5 @@ button, input {
 	outline:none;
 	border:none;
 	display:block;
+	background-color: transparent;
 }
