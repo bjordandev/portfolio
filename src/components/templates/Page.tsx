@@ -1,8 +1,10 @@
 import * as React from "react";
+import { Helmet } from "react-helmet";
+
 import "../../styles/reset.css";
 import "../../styles/index.css";
 
-import { Helmet } from "react-helmet";
+import Header from "../Header";
 
 type ChildrenProps = {
   children: React.ReactNode
@@ -35,6 +37,7 @@ const Layout: React.FC<ChildrenProps> = ({ children }) => {
   return (
     <>
       <LayoutHeader />
+      <Header />
       <main>{children}</main>
     </>
   );
