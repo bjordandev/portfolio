@@ -3,15 +3,20 @@ import * as styles from "./button-medium.module.css";
 
 type ButtonMediumProps = {
   children?: string;
+  customStyles: React.CSSProperties;
   handleClick?: (event: React.MouseEvent<HTMLElement>) => true;
 }
 
 const ButtonMedium: FC<ButtonMediumProps> = ({
   children,
+  customStyles = {},
   handleClick
 }) => {
   return (
-    <button className={styles.buttonMedium} onClick={handleClick}>
+    <button
+      style = {customStyles} 
+      className={styles.buttonMedium} 
+      onClick={handleClick}>
       { children }
     </button>
   );
