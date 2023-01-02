@@ -72,6 +72,10 @@
 }
 
 @media screen and (min-width: 768px) {
+  .introductionSection {
+    padding: 60px 0;
+  }
+
   .technologyGrid {
     display:grid;
     grid-template-columns: repeat(4, 1fr);
