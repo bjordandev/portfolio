@@ -1,0 +1,87 @@
+.introductionSection {
+  width: 84%;
+  max-width: 1264px; 
+  margin: 0 auto;
+  padding: 40px 0;
+}
+
+.introductionSectionHeading {
+  position:relative;
+  display:flex;
+  align-items: center;
+  column-gap: 20px;
+  padding: 10px;
+  margin-bottom: 53px;
+}
+
+.introductionSectionHeading::before {
+  content:"";
+  width: 20px;
+  height: 10px;
+  background-color: var(--theme-color-main);
+}
+
+.introductionSectionHeading::after {
+  position:absolute;
+  display: block;
+  bottom:0;
+  left:0;
+  content: "";
+  width: 100%;
+  height: 1px;
+  background-color: var(--theme-color-default);
+}
+
+.technologyGrid {
+  display:flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.technologyIcon {
+  width: 96px;
+  margin-bottom: 15px;
+}
+
+.technologyItem {
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.technologyName {
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 0.02em;
+  text-align: center;
+}
+
+.technologyName::after {
+  content:""; 
+  margin-top: 7px;
+  height: 6px;
+  width: 100px;
+  background-color: var(--theme-color-main);
+}
+
+@media screen and (min-width: 768px) {
+  .technologyGrid {
+    display:grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 50px;
+  }
+}
+
+.introductionContact {
+  display:block;
+  width: 100%;
+  background-color: var(--theme-color-main);
+}
