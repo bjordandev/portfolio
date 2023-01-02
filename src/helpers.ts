@@ -17,7 +17,12 @@ function setCSSVariable(name: string, value: string): void {
   }
 }
 
+function mergeClasses(classes: string[]) {
+  return classes.filter(item => item.length > 0).join(' ');
+}
+
 export {
   getCSSVariable,
-  setCSSVariable
+  setCSSVariable,
+  mergeClasses
 }

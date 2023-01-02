@@ -1,21 +1,21 @@
 import React, { ElementType, HTMLAttributes, FC} from "react"
 import * as styles from "./heading-xl.module.css";
 
-import { getCSSVariable } from "../../../helpers";
+import { mergeClasses } from "../../../helpers";
 
 interface TypographyProps extends HTMLAttributes<HTMLOrSVGElement> {
   as?: ElementType;
   children?: string;
-  color?: string;
+  customClasses?: string;
 }
 
 const HeadingXL: FC<TypographyProps> = ({
   as: Tag = 'h1',
   children,
-  color = getCSSVariable("--theme-color-text")
+  customClasses = ""
 }) => {
   return (
-    <Tag className={styles.headingXL} style={{color}}>
+    <Tag className={mergeClasses([styles.headingXL, customClasses])}>
       { children }
     </Tag>
   );
