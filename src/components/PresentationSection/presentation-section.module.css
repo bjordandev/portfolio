@@ -1,5 +1,8 @@
 .presentationSection {
-  padding: 40px 30px;
+  width: 84%;
+  max-width: 1264px; 
+  margin: 0 auto;
+  padding: 40px 0;
 }
 
 .presentationSectionTitle {
@@ -8,10 +11,6 @@
 
 .presentationSectionDescription {
   width: 200px;
-}
-
-.presentationSectionIllustration {
-  display:none;
 }
 
 .presentationSectionBackground {
@@ -23,8 +22,6 @@
     display:flex;
     align-items: center;
     justify-content: space-between;
-    margin: 0 auto;
-    max-width: 1264px;
   }
   
   .presentationSectionLeft {
@@ -39,6 +36,7 @@
 
 @media screen and (min-width: 1440px) {
   .presentationSection {
+    position:relative;
     padding: 60px 0;
     column-gap: 120px;
   }
@@ -48,19 +46,13 @@
     width: 536px;
   }
 
-  .presentationSectionIllustration {
-    max-width:785px;
-    z-index: 1;
-  }
-
   .presentationSectionBackground {
     display:block;
     position:absolute;
     right:0px;
     top:0px;
-    transform: translateY(214px);
     width: 43%;
-    height:777px;
+    height:100%;
     background-color: var(--theme-color-main);
     border-radius: 170px 0 0 170px;
     z-index: 0;

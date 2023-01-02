@@ -31,9 +31,6 @@ const PresentationSection: FC<PresentationSectionProps> = () => {
           width: '100%'
         }}>Learn More</ButtonLarge>
       </div>
-      <img src={illustration}
-          className={styles.presentationSectionIllustration}>
-      </img>
       <span className={styles.presentationSectionBackground}>
       </span>
     </section>
