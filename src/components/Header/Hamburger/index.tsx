@@ -2,6 +2,7 @@ import React, { FC, useState } from "react";
 import { Link } from "gatsby";
 import * as styles from "./hamburger.module.css";
 
+import { mergeClasses } from "../../../helpers";
 
 type HamburgerProps = {
 
@@ -25,11 +26,21 @@ const Hamburger: FC<HamburgerProps> = () => {
         }
       </button>
       <nav className={`${styles.HamburgerNav} ${openClass}`}>
-        <Link 
-          className={styles.HamburgerLink} 
-          to="/contact"
-          activeClassName={styles.HamburgerLinkActive}
-          >Contact</Link>
+        <div>
+            <Link 
+              className={styles.HamburgerLink} 
+              to="/contact"
+              activeClassName={styles.HamburgerLinkActive}
+            >Contact</Link>
+        </div>
+        <div className={styles.HeaderSocial}>
+          <a className={styles.socialIcon} href="https://github.com/bjordandev"> 
+            <i className={mergeClasses(["fa-brands", "fa-github"])}></i>
+          </a>
+          <a className={styles.socialIcon} href="https://bjordandev.hashnode.dev/"> 
+            <i className={mergeClasses(["fa-brands", "fa-hashnode"])}></i>
+          </a>
+        </div>
       </nav>
     </>
   )
