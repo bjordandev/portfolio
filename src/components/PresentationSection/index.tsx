@@ -17,16 +17,7 @@ const PresentationSection: FC<PresentationSectionProps> = () => {
         <Display as="h2">
             HI, I’M JORDAN FRONTEND DEVELOPER
         </Display>
-        <div style={{marginBottom: '53px'}}></div>
-        <BodyText>
-          Lorem ipsum dolor sit amet. 
-          Qui consequatur modi sit voluptas 
-          totam in aspernatur sint 
-          et quasi nihil et impedit adipisci 
-          sed quis cumque 
-          33 iure voluptatum. 
-        </BodyText>
-        <div style={{marginBottom: '96px'}}></div>
+        <div style={{marginBottom: '100px'}}></div>
         <ButtonLarge customStyles={{
           width: '100%'
         }}>Learn More</ButtonLarge>
