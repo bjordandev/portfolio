@@ -2,8 +2,9 @@ import React, { FC } from "react"
 import * as styles from "./header.module.css";
 
 import Hamburger from "./Hamburger";
-import ButtonMedium from "../buttons/ButtonMedium";
 import HeaderLogo from "./HeaderLogo";
+
+import { mergeClasses } from "../../helpers";
 
 type HeaderProps = {
   
@@ -12,10 +13,17 @@ type HeaderProps = {
 const Header: FC<HeaderProps> = ({}) => {
   return (
     <header className={styles.Header}>
-      <HeaderLogo />
-      <Hamburger open={false}/>
-      <div className={styles.HeaderContact}>
-        <ButtonMedium>Contact Me</ButtonMedium>
+      <div className={styles.HeaderContent}>
+        <HeaderLogo />
+        <Hamburger open={false}/>
+        <nav className={styles.HeaderSocial}>
+          <a className={styles.socialIcon} href="https://github.com/bjordandev"> 
+            <i className={mergeClasses(["fa-brands", "fa-github"])}></i>
+          </a>
+          <a className={styles.socialIcon} href="https://bjordandev.hashnode.dev/"> 
+            <i className={mergeClasses(["fa-brands", "fa-hashnode"])}></i>
+          </a>
+        </nav>
       </div>
     </header>
   );

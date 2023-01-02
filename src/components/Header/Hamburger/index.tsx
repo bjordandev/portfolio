@@ -1,4 +1,5 @@
 import React, { FC, useState } from "react";
+import { Link } from "gatsby";
 import * as styles from "./hamburger.module.css";
 
 
@@ -24,9 +25,11 @@ const Hamburger: FC<HamburgerProps> = () => {
         }
       </button>
       <nav className={`${styles.HamburgerNav} ${openClass}`}>
-        <a className={styles.HamburgerLink} href="#">Hello</a>
-        <a className={styles.HamburgerLink} href="#">Toto</a>
-        <a className={styles.HamburgerLink} href="#">Hello</a>
+        <Link 
+          className={styles.HamburgerLink} 
+          to="/contact"
+          activeClassName={styles.HamburgerLinkActive}
+          >Contact</Link>
       </nav>
     </>
   )
